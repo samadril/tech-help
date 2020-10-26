@@ -105,3 +105,9 @@ cfg_ver:AX11000V1.0.0P1
 - Restart the Router
 - Verify the Router is now on the older version of Firmware
 - If there is a Beta version, of that version you want to go to, you will now be able to upgrade to that beta version.
+
+## File Links
+
+- [V1.0.7](https://static.tp-link.com/2020/202003/20200312/Archer%20AX11000(US)_V1_200216.zip) - Release version of `1.0.7`
+- [V1.0.7 P1](https://static.tp-link.com/2020/202003/20200317/ax11000v1-up-ver1-0-7-P1[20200311-rel7814]_sign_2020-03-11_14.42.54.zip) - Beta version of `1.0.7 P1`
+- Both of these files can also be found [HERE](https://github.com/samadril/tech-help/tree/main/tplink/files) in this repository.
