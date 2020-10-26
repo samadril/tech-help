@@ -4,7 +4,7 @@
 
 ### Get `DEBUG` firmware loaded onto your router
 - 1. Contact TP-Link Support to get and download a `DEBUG` version of the current or newer firmware then that you are currently running.
-  - Current firmware download link:<BR>https://static.tp-link.com/2020/202010/20201019/ax11000v1-up-ver1-1-1-P8[20201018-rel85979]_beta_2020-10-19_12.57.49.zip
+  - Current `DEBIG` firmware download link `V1.1.1 P8`:<BR>https://static.tp-link.com/2020/202010/20201019/ax11000v1-up-ver1-1-1-P8[20201018-rel85979]_beta_2020-10-19_12.57.49.zip
 - 2. Download the `DEBUG` firmware from the link provided.
 - 3. ***(OPTIONAL FOR FIXING ISSUE)*** Once the `DEBUG` firmware has been downloaded and just prior to installing the `DEBUG` firmware, connect a USB flash drive into the router that has been formatted `FAT32`. <BR> The debug firmware will collect debug logs through the USB Sharing function, it will automatically save the debug log into USB disk which is connected to AX11000. Connecting  the formatted USB to the USB port of AX11000, will automatically record the debug logs. There is no special settings required other then just plugging it in and waiting for the issue to reoccur.<BR>**ATTENTION:** There is no need to enable the USB sharing function. You just need to plug your USB drive. The debug logs are saved in the tplink_log directory. It is recommended to insert the USB flash drive before upgrading the debug firmware to ensure that we can collect the complete debug log.
 - 4. Now that you have the `DEBUG` firmware and; if you chose, a USB has been connected, update the `DEBUG` firmware. <BR> If you need help you can get more details about how to update firmware manually from below FAQ:
