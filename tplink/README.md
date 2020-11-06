@@ -1,12 +1,15 @@
 # TP-Link and Router Help
 
+**NOTE:** If any of the links below do not work I placed the files [HERE](https://github.com/samadril/tech-help/tree/main/tplink/files) In the files folder in this repository.
+
 ## Back to old Firmware
 
 ### Get `DEBUG` firmware loaded onto your router
 - 1. Contact TP-Link Support to get and download a `DEBUG` version of the current or newer firmware then that you are currently running.
-  - Current `DEBUG` firmware download link `V1.1.1 P8`:<BR>https://static.tp-link.com/2020/202010/20201019/ax11000v1-up-ver1-1-1-P8[20201018-rel85979]_beta_2020-10-19_12.57.49.zip
-- 2. Download the `DEBUG` firmware from the link provided.
-- 3. ***(OPTIONAL FOR FIXING ISSUE)*** Once the `DEBUG` firmware has been downloaded and just prior to installing the `DEBUG` firmware, connect a USB flash drive into the router that has been formatted `FAT32`. <BR> The debug firmware will collect debug logs through the USB Sharing function, it will automatically save the debug log into USB disk which is connected to AX11000. Connecting  the formatted USB to the USB port of AX11000, will automatically record the debug logs. There is no special settings required other then just plugging it in and waiting for the issue to reoccur.<BR>**ATTENTION:** There is no need to enable the USB sharing function. You just need to plug your USB drive. The debug logs are saved in the tplink_log directory. It is recommended to insert the USB flash drive before upgrading the debug firmware to ensure that we can collect the complete debug log.
+  - Current `DEBUG` firmware download link `V1.1.1 P8`  [HERE](https://static.tp-link.com/2020/202010/20201019/ax11000v1-up-ver1-1-1-P8[20201018-rel85979]_beta_2020-10-19_12.57.49.zip)
+- 2. Download the `DEBUG` firmware from the link provided in step 1.
+- 3. If you just want to get to the OLDER BETA code that did not have issues you can continue on to the next section [Once on the `DEBUG` firmware, edit the `/etc/partition_config/soft-version` file](#once-on-the-debug-firmware-edit-the-etcpartition_configsoft-version-file)
+- 4. ***(OPTIONAL FOR FIXING ISSUE)*** Once the `DEBUG` firmware has been downloaded and just prior to installing the `DEBUG` firmware, connect a USB flash drive into the router that has been formatted `FAT32`. <BR> The debug firmware will collect debug logs through the USB Sharing function, it will automatically save the debug log into USB disk which is connected to AX11000. Connecting  the formatted USB to the USB port of AX11000, will automatically record the debug logs. There is no special settings required other then just plugging it in and waiting for the issue to reoccur.<BR>**ATTENTION:** There is no need to enable the USB sharing function. You just need to plug your USB drive. The debug logs are saved in the tplink_log directory. It is recommended to insert the USB flash drive before upgrading the debug firmware to ensure that we can collect the complete debug log.
 - 4. Now that you have the `DEBUG` firmware and; if you chose, a USB has been connected, update the `DEBUG` firmware. <BR> If you need help you can get more details about how to update firmware manually from below FAQ:
 https://www.tp-link.com/support/faq/2139/
 - 5. ***(OPTIONAL FOR FIXING ISSUE)*** Once you are able to reproduce the problem using the above debug firmware, please collect the debug info as the following instruction.
@@ -15,9 +18,9 @@ https://www.tp-link.com/support/faq/2139/
 ### Once on the `DEBUG` firmware, edit the `/etc/partition_config/soft-version` file
 **NOTE:** This is strictly information and meant to help someone with an issue on there current firmware release, This procedure has the potential to brick your router. If you do not understand what you are doing after reading through this procedure, do not attempt without help from TPLink.
 
-- Download 1.0.7 official firmware from URL:  https://static.tp-link.com/2020/202003/20200312/Archer%20AX11000(US)_V1_200216.zip
-- Update to the the debug firmware first. This is completed in the first section `Get `DEBUG` firmware loaded onto your router` in steps
-- Once upgrade completes, and router reboots, reconnect via ethernet cable.
+- Download the OLDER official firmware from URL:  https://static.tp-link.com/2020/202003/20200312/Archer%20AX11000(US)_V1_200216.zip
+- Before continuing with any of the steps below be sure you Update to the most current [debug firmware](https://static.tp-link.com/2020/202010/20201019/ax11000v1-up-ver1-1-1-P8[20201018-rel85979]_beta_2020-10-19_12.57.49.zip) first. This is completed in the first section [`Get `DEBUG` firmware loaded onto your router`](#get-debug-firmware-loaded-onto-your-router)
+- Once upgrade completes, and router reboots, reconnect via ethernet cable. (You can do over wifi but not recommended)
 - Make sure you have software that will allow you to Telnet
   - An option for Windows users
   - In windows search box, type "Windows features"
@@ -72,7 +75,7 @@ cfg_ver:AX11000V1.0.0P1
 
 - While in the vi interface. Hit the <insert> key or Type letter "i" to allow you to enter edit mode
 in order to make a change to the file.
-- Using the arrow keys, navigate on the screen and Change `soft_ver:1.1.1` to `soft_ver:1.0.1`<BR>Note: This may change based on the original code version you are using. In this case I am using `Archer AX11000(US)_V1_200216` which can be found [HERE](./files/Archer%AX11000(US)_V1_200216.zip)
+- Using the arrow keys, navigate on the screen and Change `soft_ver:1.1.1` to `soft_ver:1.0.1`<BR>Note: This may change based on the original code version you are using. In this case I am using `Archer AX11000(US)_V1_200216` which can be found [HERE](https://static.tp-link.com/2020/202003/20200312/Archer%20AX11000(US)_V1_200216.zip)
 - Once you are sure you have made this change right and it looks like what you see below, Hit escape (it will not seem like it did anything, but it exited the edit mode).<BR>
 
 **BEFORE**<BR>
@@ -108,6 +111,7 @@ cfg_ver:AX11000V1.0.0P1
 
 ## File Links
 
-- [V1.0.7](https://static.tp-link.com/2020/202003/20200312/Archer%20AX11000(US)_V1_200216.zip) - Release version of `1.0.7`
+- [Older Official Firmware](https://static.tp-link.com/2020/202003/20200312/Archer%20AX11000(US)_V1_200216.zip)
 - [V1.0.7 P1](https://static.tp-link.com/2020/202003/20200317/ax11000v1-up-ver1-0-7-P1[20200311-rel7814]_sign_2020-03-11_14.42.54.zip) - Beta version of `1.0.7 P1`
-- Both of these files can also be found [HERE](https://github.com/samadril/tech-help/tree/main/tplink/files) in this repository.
+- [DEBUG V1.1.1 P8](https://static.tp-link.com/2020/202010/20201019/ax11000v1-up-ver1-1-1-P8[20201018-rel85979]_beta_2020-10-19_12.57.49.zip)
+- ALL of these files can also be found [HERE](https://github.com/samadril/tech-help/tree/main/tplink/files) in this repository.
