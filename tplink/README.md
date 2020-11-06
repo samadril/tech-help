@@ -1,4 +1,4 @@
-# TP-Link and Router Help
+# TP-Link and Router Help - Anything you do below or on your own you assume the risk. If you have any questions please be sure to reach out to the TP-Link experts before proceeding!
 
 **NOTE:** If any of the links below do not work I placed the files [HERE](https://github.com/samadril/tech-help/tree/main/tplink/files) In the files folder in this repository.
 
